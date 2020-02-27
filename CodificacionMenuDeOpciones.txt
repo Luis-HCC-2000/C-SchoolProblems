@@ -1,0 +1,50 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+main ()
+{
+    std::cout << "Menu de opciones" << std::endl;
+    std::cout << "Calculo de areas" << std::endl;
+    std::cout << "1.-Volumen de una esfera" << std::endl;
+    std::cout << "2.-Distancia entre 2 puntos en el espacio coordenado" << std::endl;
+    std::cout << "3.- Longitud de la diagonal principal de un prisma rectangular" << std::endl;
+    std::cout << "Introduce una de las opciones" << std::endl;
+    int opcion=0;
+    std::cin >> opcion;
+    if(opcion==1){
+        std::cout << "Introduce el radio de la esfera" << std::endl;
+        float r=0;
+        std::cin >> r;
+        float a=4*3.1415*r*r;
+        std::cout << "El area de la esfera en metros cuadrados es igual a:" <<a << std::endl;
+    }
+    if(opcion==2){
+        std::cout << "Ingresa la coordenada en X del primer punto:" << std::endl;
+        float x1=0;
+        std::cin >> x1;
+        std::cout << "Ingresa la coordenada en Y del primer punto" << std::endl;
+        float y1=0; 
+        std::cin >> y1;
+        std::cout << "Ingresa la coordenada en X del segundo punto:" << std::endl;
+        float x2=0;
+        std::cin >> x2;
+        std::cout << "Ingresa la coordenada en Y del segundo punto" << std::endl;
+        float y2=0; 
+        std::cin >> y2;
+        float distancia=sqrt(pow((x1-x2),2)+ pow((y1-y2),2));
+        std::cout << "La distancia entre los 2 puntos es igual a:" <<distancia << std::endl;
+    }
+    if(opcion==3){
+        float altura=0;
+        std::cout << "Ingrese la altura del prisma" << std::endl;
+        std::cin >> altura;
+        float ancho=0; 
+        std::cout << "Ingrese el ancho del prisma" << std::endl;
+        std::cin >> ancho;
+        float largo=0;
+        std::cout << "Ingrese el largo del prisma" << std::endl;
+        std::cin >> largo;
+        float diagonal= sqrt(pow(altura,2)+pow(ancho,2)+pow(largo,2));
+        std::cout << "El largo de la diagonal del prisma es igual a:" <<diagonal  << std::endl;
+    }
+}

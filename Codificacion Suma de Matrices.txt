@@ -1,0 +1,39 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int
+main ()
+{
+  int m=0;
+  int n=0;
+  float w=0;
+  std::cout << "Ingresar numero de filas de las matrices que se van a sumar" << std::endl;
+  std::cin >> m;
+  std::cout << "Ingresar numero de columnas de las matrices que se van a sumar" << std::endl;
+  std::cin >> n;
+  float mat[m][n];
+  float matDos[m][n];
+  float matTres[m][n];
+  for (int i=1; i< m+1 ; ++i){
+      for (int j=1 ; j<m+1 ; ++j){
+          std::cout << "Ingresar el valor del elemento (" << i << "," << j << "de la primer matriz: " << std::endl;
+          std::cin >> w;
+          mat[i][j]=w;
+      }
+  }
+  for (int i=1; i< m+1 ; ++i){
+      for (int j=1 ; j<m+1 ; ++j){
+          std::cout << "Ingresar el valor del elemento (" << i << "," << j << ") de la segunda matriz: " << std::endl;
+          std::cin >> w;
+          matDos[i][j]=w;
+      }
+  }
+  for (int i=1; i< m+1 ; ++i){
+      for (int j=1 ; j<m+1 ; ++j){
+          matTres[i][j]= matDos[i][j]+ mat[i][j];
+          cout << matTres[i][j] << " " ;
+      }
+      cout << "\n";
+  }
+}

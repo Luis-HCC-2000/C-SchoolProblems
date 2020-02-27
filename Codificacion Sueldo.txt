@@ -1,0 +1,29 @@
+#include <iostream>
+#include<math.h>
+
+
+int main()
+{
+    std::cout << "Ingresar sueldo" << std::endl;
+    float total=0;
+    std::cin >> total;
+    std::cout << "Ingresar horas extras trabajadas" << std::endl;
+    float h=0;
+    std::cin >> h;
+    if (h==1){
+        total=total+30;
+    }
+    if (h==2){
+        total=total+(38*2);
+    }
+    if (h==3){
+        total=total+150;
+    }
+    if (h>=4 && h<31){
+        total=total+h*70;
+    }
+    if (h>30){
+        total=total+(70*30);
+    }
+    std::cout << "El dinero total que recibirás será:" << total << std::endl;
+}

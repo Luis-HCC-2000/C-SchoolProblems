@@ -1,0 +1,62 @@
+main ()
+{
+  float datosordenados[50];
+  float datosdesordenados[50];
+  int valortemporal = 0;
+  int a = 0;
+  int b = 0;
+  for (int i = 1; i < 51; ++i)
+    {
+      cout << "Ingresar la cantidad " << i << ": ";
+      cin >> datosdesordenados[i];
+    }
+  int mayor = 0;
+  int indmayor = 0;
+  int ind = 0;
+  int suma = 0;
+  int sum = 1;
+  int mediana = 0;
+  while (sum > 0)
+    {
+      suma = 0;
+      mayor = 0;
+      for (int i = 1; i < 51; ++i)
+	{
+	  if (datosdesordenados[i] > mayor)
+	    {
+	      mayor = datosdesordenados[i];
+	      indmayor = i;
+	    }
+	}
+      datosdesordenados[indmayor] = 0;
+      ind = ind + 1;
+      datosordenados[ind] = mayor;
+      for (int j = 1; j < 51; ++j)
+	{
+	  suma = datosdesordenados[j] + suma;
+	}
+      if (suma == 0)
+	{
+	  sum = 0;
+	}
+    }
+    int datosmayores=0;
+    int datosmenores=0;
+  int lista[50];
+  for (int i = 1; i < 51; ++i)
+    {
+      lista[i] = datosordenados[50 - i];
+    }
+    float datomayor=datosordenados[1];
+    float datomenor=datosordenados[50];
+    std::cout << "dato mayor = a " <<datomayor << std::endl;
+    for(int i=1; i<51;++i){
+        if(datosordenados[i]==datomayor){
+            datosmayores=datosmayores+1;
+        }
+        if(datosordenados[i]==datomenor){
+            datosmenores=datosmenores+1;
+        }
+    }
+    std::cout << "El numero menor es:" <<datomenor <<" y se repitio: " <<datosmenores << " veces, y el dato mayor es:" <<datomayor <<" y se repitio:" <<datosmayores << "veces"  << std::endl;
+}

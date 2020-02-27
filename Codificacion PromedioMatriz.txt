@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>  
+using namespace std;
+main ()
+{
+    int M=0;
+    int N=0;
+    int valorTemporal=0;
+    int sum=0;
+    std::cout << "Ingresar cantidad de filas de la matriz" << std::endl;
+    cin >> M;
+    std::cout << "Ingresar cantidad de columnas de la matriz" << std::endl;
+    cin >> N;
+    int matriz[M][N];
+    for (int i=1 ; i<M+1; ++i){
+        for (int j=1 ; j<M+1; ++j){
+            cout<< "Ingresar el valor de la ubicacion (" << i << "," << j << ") de la matriz: ";
+            std::cin >> valorTemporal;
+            matriz[i][j]=valorTemporal;
+            sum=sum + matriz[i][j];
+        }
+    }
+    int totalDeDatos=M*N;
+    float media=sum/totalDeDatos;
+    cout<< "El promedio de todos los datos ingresados es igual a : " <<media ;
+}

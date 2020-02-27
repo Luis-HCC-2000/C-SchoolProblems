@@ -1,0 +1,43 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+main ()
+{
+    float a=0;
+    float b=0;
+    float c=0;
+    float grande=0;
+    float chico1=0;
+    float chico2=0;
+    std::cout << "Ingresar lado 1" << std::endl;
+    std::cin >> a;
+    std::cout << "Ingresar lado 2" << std::endl;
+    std::cin >> b;
+    std::cout << "Ingresar lado 3" << std::endl;
+    std::cin >> c;
+    if(a>c && a>b){
+        grande=a;
+        chico2=b;
+        chico1=c;
+    }
+    if(b>c && b>a){
+        grande=b;
+        chico2=a;
+        chico1=c;
+    }
+    if(c>a && c>b){
+        grande=c;
+        chico2=b;
+        chico1=a;
+    }
+    grande=pow(grande,2);
+    chico1=pow(chico1,2);
+    chico2=pow(chico2,2);
+    float sumachicos= chico1+chico2;
+    if(sumachicos==grande){
+        std::cout << "Si es un triangulo rectangulo" << std::endl;
+    }
+    else{
+        std::cout << "No es un triangulo rectangulo" << std::endl;
+    }
+}

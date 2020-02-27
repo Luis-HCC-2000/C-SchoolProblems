@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+main()
+{
+std::cout << "Ingresar cantidad de turistas" << std::endl;
+int n =0;
+int temporal1=0;
+int temporal2=0;
+int temporal3=0;
+int t=3;
+std::cin >> n;
+int datos[n][t];
+for(int i=1; i<n+1; ++i){
+	std::cout << "Ingresar la distancia recorrida del turista:" <<i << std::endl;
+	std::cin >> temporal1;
+	datos[i][1]= temporal1;
+	std::cout << "Ingresar tiempo de estancia del turista:" <<i << std::endl;
+	std::cin >>temporal2;
+	if (temporal1*2>800 && temporal2>7){
+		temporal3= 5000*.7 + temporal1*.2*2;
+		datos[i][3]= temporal3;
+		}
+	else {
+		datos[i][3]=5000;
+		}
+	}
+
+for (int i=1; i<n+1; ++i){
+		std::cout << "A el turista numero:" <<i << " Se le cobrara la cantidad de:" << datos[i][3] << std::endl;	
+	}
+}  

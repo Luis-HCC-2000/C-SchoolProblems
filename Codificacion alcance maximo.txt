@@ -1,0 +1,28 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int
+main ()
+{
+ float pi=3.1415926535;   
+ float f;
+ float t=0;
+ float alcance;
+ float mayoralcance=0;
+ int indicemayor=0;
+ std::cout << "Ingresar la magnitud del tiro parabolico" << std::endl;
+ std::cin >> f;
+ float gravedad=9.81;
+ float cambios[3];
+ for (int i=3; i<8; ++i){
+     t= 2*(f*sin((i*10*pi)/180))/gravedad;
+     alcance=(f*cos((i*10*pi)/180))*t;
+     cambios[i/3]=alcance;
+     if (cambios[i/3]>mayoralcance){
+         mayoralcance=cambios[i/3];
+         indicemayor=i*10;
+     }
+ }
+ std::cout << "El mayor alcance ocurre cuando es lanzado a: " <<indicemayor << " grados, y alcanza una distancia de: " << mayoralcance << std::endl;
+}

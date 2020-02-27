@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int
+main ()
+{
+  int m;
+  int w;
+  int total=0;
+  cout <<
+    "Programa para obtener la suma de las diagonales principales de una matriz.\n";
+  cout << "Ingresar Dimension de la Matriz: ";
+  cin >> m;
+  int mat[m][m];
+  for (int j = 1; j < m + 1; ++j)
+    {
+      for (int i = 1; i < m + 1; ++i)
+	    {
+	    cout << "Ingresar el valor del elemento (" << i << "," << j <<
+	        ") de la matriz";
+	    cin >> w;
+	    mat[i][j] = w;
+	    }
+    }
+   for (int i = m; i > 0; --i)
+    {
+      total = total + mat[i][i];
+    }
+  for (int i = 1; i < m + 1; ++i)
+    {
+      total = total + mat[i][i];
+    }
+  cout << "La suma de las diagonales de la matriz es igual a : " << total;
+}

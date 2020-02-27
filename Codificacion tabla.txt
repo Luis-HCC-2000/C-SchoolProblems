@@ -1,0 +1,30 @@
+#include <math.h>
+using namespace std;
+main ()
+{
+    int m=0;
+    int n=0;
+    float sumapares=0;
+    float sumaimpares=0;
+    float temporal=0;
+    std::cout << "Ingresar cantidad de filas de la tabla" << std::endl;
+    std::cin >> m;
+    std::cout << "Ingresar cantidad de columnas de la tabla" << std::endl;
+    std::cin >> n;
+    float tabla[m][n];
+    for (int i=1; i<m+1;++i){
+        for (int j=1; j<n+1; ++j){
+            std::cout << "Ingresar el valor (" <<i <<"," <<j <<") de la tabla" << std::endl;
+            std::cin >> temporal ;
+            tabla[i][j]= temporal;
+            if (j%2==0){
+                sumapares= sumapares+ tabla[i][j];
+            }
+            else{
+                sumaimpares=sumaimpares+ tabla[i][j];
+            }
+        }
+    }
+    std::cout << "La suma de las columnas pares es igual a:" <<sumapares << std::endl;
+    std::cout << "La suma de las columnas impares es igual a:" <<sumaimpares << std::endl;
+}

@@ -1,0 +1,20 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+main ()
+{
+    float n;
+    float f;
+    float r; 
+    std::cout << "Ingresar N" << std::endl;
+    std::cin >> n;
+    std::cout << "Ingresar F" << std::endl;
+    std::cin >> f;
+    std::cout << "Ingresar R" << std::endl;
+    std::cin >> r;
+    float total=1;
+    for (int i=1 ; i<n+1; ++i){
+        total=total+pow(f*r,i);
+    }
+    cout<< "La sucesion es igual a " <<total;
+}

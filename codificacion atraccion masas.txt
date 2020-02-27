@@ -1,0 +1,20 @@
+#include <iostream>
+#include<math.h>
+
+using namespace std;
+
+int main()
+{
+    std::cout << "Ingresar masa 1:" << std::endl;
+    float m1=0;
+    std::cin >> m1;
+    std::cout << "Ingresar masa 2:" << std::endl;
+    float m2=0;
+    std::cin >> m2;
+    float gravedad=9.81;
+    float atraccion=0;
+    for (float i=10; i<101 ; ++i){
+        atraccion= gravedad*m1*m2/pow(i,2);
+        std::cout << "La atraccion cuando las masas estan separadas a una distancia de:" <<i <<" es igual a:"<< atraccion  << std::endl;
+    }
+}

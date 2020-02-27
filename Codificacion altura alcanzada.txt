@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    float pi=  3.141592;
+    float vo=20;
+    float gravedad=9.81;
+    float h=0;
+    for (int i=10; i<86; ++i){
+        h= (pow(vo,2)* pow(sin(i*pi/180),2))/2*gravedad;
+        std::cout << "La altura alcandada del proyectil lanzado en un angulo de " << i << " grados con una velocidad inicial de:" << vo << " es igual a:" << h << std::endl;
+    }
+}

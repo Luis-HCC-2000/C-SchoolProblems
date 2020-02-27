@@ -1,0 +1,50 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+main ()
+{
+    int n=0;
+    int sumaimpares=0;
+    int sumapares=0;
+    std::cout << "Ingresar n" << std::endl;
+    std::cin >> n;
+    int datos[n];
+    int pares[n];
+    int impares[n];
+    int cuentapares=0;
+    int cuentaimpares=0;
+    int valortemp=0;
+    for (int i=1; i<n+1; ++i){
+        std::cout << "Ingresar el valor del numero:" <<i << std::endl;
+        std::cin >> valortemp;
+        datos[i]=valortemp;
+        if ((valortemp % 2) == 0){
+            pares[i]=valortemp;
+            impares[i]=0;
+            sumapares=sumapares+valortemp;
+            cuentapares= cuentapares+1;
+        }
+        else {
+            pares[i]=0;
+            impares[i]=valortemp;
+            sumaimpares=sumaimpares+valortemp;
+            cuentaimpares=cuentaimpares+1;
+        }
+    }
+    std::cout << "Los numeros pares son:" << std::endl;
+    for (int i=1 ; i<n+1; ++i){
+        if (pares[i]>0){
+            cout << pares[i] <<" , " ;
+        }
+    }
+    std::cout << " \n  La suma de todos los numeros pares es igual a :" <<sumapares << std::endl;
+    std::cout << "Y el promedio de los numeros pares es igual a " <<sumapares/cuentapares << std::endl;
+    std::cout << "Los numeros impares son:" << std::endl;
+    for (int i=1 ; i<n+1; ++i){
+        if (impares[i]>0){
+            cout << impares[i] <<" , " ;
+        }
+    }
+    std::cout << "\n Y la suma de los numeros impares es: " << sumaimpares << std::endl;
+    std::cout << "Y el promedio de los numeros pares es igual a " <<sumaimpares/cuentaimpares << std::endl;
+}

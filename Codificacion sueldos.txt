@@ -1,0 +1,18 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+main ()
+{
+    float total=0;
+    std::cout << "Ingresar sueldo" << std::endl;
+    float sueldo=0;
+    std::cin >> sueldo;
+    if (sueldo<5000){
+        total=sueldo+sueldo*.15;
+        std::cout << "Como su sueldo es menor a $5000, se le agrega el 15 porciento, dejandolo con un sueldo de:$" << total << std::endl;
+    }
+    else{
+        total=sueldo+sueldo*.1;
+        std::cout << "Como su sueldo es mayor a $5000, se le agrega el 10 porciento, dejandolo con un sueldo de:$" << total << std::endl;
+    }
+}

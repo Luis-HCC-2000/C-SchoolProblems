@@ -1,0 +1,23 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+main ()
+{
+    float n;
+    float x;
+    std::cout << "Ingresar N" << std::endl;
+    std::cin >> n;
+    std::cout << "Ingresar X" << std::endl;
+    std::cin >> x;
+    float tot=1;
+    float total=0;
+    float i=0;
+    for (int j=i ; j<n+1; ++j){
+        while (i<j){
+            i=i+1;
+            tot=tot*i;
+        }
+        total=(pow(x,j)/tot)+total;
+    }
+    cout<< "El calculo del numero E es igual a " <<total;
+}

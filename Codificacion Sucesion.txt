@@ -1,0 +1,23 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+main ()
+{
+    float n;
+    float t;
+    std::cout << "Ingresar N" << std::endl;
+    std::cin >> n;
+    std::cout << "Ingresar t" << std::endl;
+    std::cin >> t;
+    float tot=1;
+    float total=0;
+    float i=0;
+    for (int j=i ; j<n+1; ++j){
+        while (i<j){
+            i=i+1;
+            tot=tot*i;
+        }
+        total=(pow( 0.054*t,j)/tot)+total;
+    }
+    cout<< "La sucesion es igual a " <<total;
+}

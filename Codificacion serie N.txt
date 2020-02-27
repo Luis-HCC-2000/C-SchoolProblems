@@ -1,0 +1,36 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int
+main ()
+{
+  int n;
+  float uno=1;
+  float divisor=0;
+  float suma = 0;
+  float semisuma=2;
+  std::cout << "Ingresar N" << std::endl;
+  std::cin >> n;
+  for (int i = 1; i < n +1 ; ++i)
+    {
+      if (i == 1)
+	{
+	  cout << "1";
+	  suma = suma + 1;
+	}
+      else if ((i % 2) == 0)
+	{
+	  cout << "-(1/" << i << ")";
+	  divisor=i;
+	  suma = suma - (uno/divisor);
+	}
+      else
+	{
+	  divisor= i;
+	  cout << "+(1/" << i << ")";
+	  suma = suma + (uno/divisor);
+	}
+    }
+  std::cout << "=" << suma << std::endl;
+}

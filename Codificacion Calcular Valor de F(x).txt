@@ -1,0 +1,22 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    float x;
+    std::cout << "Ingresar X" << std::endl;
+    std::cin >> x;
+    float f1;
+    float f2;
+    float f3;
+    float f4;
+    f1= pow(x,2);
+    f2=x/6;
+    f3= sqrt(x);
+    f4=pow(x,5)+3;
+    std::cout << x << " Elevado al cuadrado es igual a: " << f1 << std::endl;
+    std::cout << x << " Dividido entre 6 es igual a: : " << f2 << std::endl;
+    std::cout <<"La raiz cuadrada de "<< x << " es igual a: " << f3 << std::endl;
+    std::cout <<"(" << x << "^5)+3  es igual a: " << f4 << std::endl;
+}

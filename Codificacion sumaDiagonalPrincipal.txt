@@ -1,0 +1,31 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int
+main ()
+{
+  int m=0;
+  int w=0;
+  int total=0;
+  std::cout << "Ingresar dimension de la matriz cuadrada" << std::endl;
+  std::cin >> m;
+  int mat[m][m];
+  for (int i = 1; i < m + 1; ++i)
+    {
+      for (int j = 1; j < m + 1; ++j)
+	{
+	  cout << "Ingresar el valor del elemento (" << i << "," << j <<
+	    ") De la matriz: ";
+	  std::cin >> w;
+	  mat[i][j] = w;
+	}
+    }
+  for (int i = 1; i < m + 1; ++i)
+    {
+      total = total + mat[i][i];
+    }
+  std::
+    cout << "La suma de la diagonal principal de la matriz es igual a:" <<
+    total << std::endl;
+}
